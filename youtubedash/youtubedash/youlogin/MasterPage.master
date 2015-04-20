@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="icon" href="/favicon.ico">
+   <title>YouDash Login</title> 
+       <%--<link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/admin.css">--%>
+    <!-- This is the primary style sheet driving this theme. This stylesheet imports core bootstrap css and other google fonts implicitly. So, they don't need to be inluded in your applicaiton.--> 
+ <link rel="Stylesheet" type="text/css" href="<%=ResolveUrl("~/css/datepick.min.css")%>" />
+       <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/css/bootstrap.min.css")%>" />
+    <link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/css/styles.css")%>" />
+ 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+<link rel="stylesheet" href="<%=ResolveUrl("~/fancybox/source/jquery.fancybox.css?v=2.1.3") %>" type="text/css" media="screen" />
+<script type="text/javascript" src="<%=ResolveUrl("~/fancybox/source/jquery.fancybox.pack.js?v=2.1.3") %>"></script>
+
+<link rel="stylesheet" href="<%=ResolveUrl("~/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5") %>" type="text/css" media="screen" />
+<script type="text/javascript" src="<%=ResolveUrl("~/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5") %>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5") %>"></script>
+
+<link rel="stylesheet" href="<%=ResolveUrl("~/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7") %>" type="text/css" media="screen" />
+<script type="text/javascript" src="<%=ResolveUrl("~/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7") %>"></script>
+
+ 
+<script type="text/javascript">
+    $(".details").fancybox({
+        maxWidth: 500,
+        maxHeight: 400,
+        fitToView: false,
+        width: '70%',
+        height: '70%',
+        autoSize: true,
+        closeClick: false,
+        openEffect: 'elastic',
+        closeEffect: 'elastic'
+    });
+    </script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+<!-- This is the top blue NavBar. This nav bar includes UMKC Branding (logo), Applicaiton Branding(Application Name) and any menu items in your application -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <div class="navbar-brand umkc-brand"><a href="Dashboard.aspx" target="_blank"><img src=<%=ResolveUrl("~/images/YouTube-logo-light.png")%>></img></a></div>
+      <div class="navbar-brand app-brand">Youtube Dashboard Application</div>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active" data-toggle="tooltip" data-placement="bottom" title="Go to Home Page"><a href="Default.aspx"><span class="glyphicon glyphicon-home"></span></a></li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-align-justify"></span> <span class="hidden-md hidden-lg">User</span> </a>
+          <ul class="dropdown-menu solid-menu" role="menu">
+              <li><a data-fancybox-type='iframe' class="details" href="RecentSearches.aspx">&nbsp;Search History<span class="glyphicon glyphicon-search pull-right"></span></a></li>           
+              <li><a data-fancybox-type='iframe' class="details" href="RecentVideos.aspx">&nbsp;Viewed Videos<span class="glyphicon glyphicon-facetime-video  pull-right"></span></a></li>                   
+          </ul>
+        </li>
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span class="glyphicon glyphicon-cog"></span> <span class="hidden-md hidden-lg">User</span> </a>
+          <ul class="dropdown-menu solid-menu" role="menu">
+            <li><a href="logout.aspx">Signout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--/.nav-collapse --> 
+  </div>
+</nav>
+<!--TOP Blue NavBar Ends Here-->
+<!--The main container div for page content follows.-->
+<div class="container">
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+  </div>
+<!-- /container -->
+<footer class="footer">
+    <div class="container footer-container"><u>YouDash Application</u></a> <span class="pull-right">&copy; Fantastic 4 Team</span> </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="<%=ResolveUrl("~/js/jquery.min.js")%>"></script> 
+<script src="<%=ResolveUrl("~/js/bootstrap-datepicker.min.js" ) %>" ></script>  
+<script src="<%=ResolveUrl("~/js/bootstrap.min.js")%>"></script> 
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug --> 
+<script src="<%=ResolveUrl("~/js/ie10-viewport-bug-workaround.js")%>"></script> 
+<script src="<%=ResolveUrl("~/js/site.js")%>"></script>
+  
+</body>
+</html>
