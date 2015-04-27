@@ -1,0 +1,4 @@
+C:\Users\yarra\Documents\Visual Studio 2010\Projects\youtubedash\User\bin\Debug\User.dll
+C:\Users\yarra\Documents\Visual Studio 2010\Projects\youtubedash\User\bin\Debug\User.pdb
+C:\Users\yarra\Documents\Visual Studio 2010\Projects\youtubedash\User\obj\Debug\User.dll
+C:\Users\yarra\Documents\Visual Studio 2010\Projects\youtubedash\User\obj\Debug\User.pdb

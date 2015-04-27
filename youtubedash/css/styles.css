@@ -1,0 +1,75 @@
+﻿@import url("bootstrap.min.css");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Droid+Sans:400);
+
+html {position: relative;-ms-text-size-adjust: 100%;min-height: 100%;}
+body {padding-top: 60px;margin-bottom: 30px;font-family: 'Open Sans', sans-serif;font-size:13px;line-height: 21px;}
+
+/*Bootstrap Custom Overrides */
+
+@media (min-width: 768px) {.navbar-form {width: auto;border: 0;margin-left: 0;margin-right: 0;padding-top: 0;padding-bottom: 0;-webkit-box-shadow: none;box-shadow: none;}.navbar-nav > li > a {padding-top: 10px;padding-bottom: 10px;}}
+.navbar{min-height: 40px;}
+.navbar-fixed-top {top: 0;border-width: 0 0 1px;}
+.navbar-brand {padding: 10px 15px;height: 40px;}
+.navbar-toggle {margin-top: 3px;margin-bottom: 3px;}
+.navbar-form {margin-left: -15px;margin-right: -15px;padding: 10px 15px;border-top: 1px solid transparent;border-bottom: 1px solid transparent;-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);margin-top: 3px;margin-bottom: 3px;}
+.navbar-btn {margin-top: 3px;margin-bottom: 3px;}.navbar-btn.btn-sm{margin-top: 5px;margin-bottom: 5px;}
+.navbar-text {margin-top: 10px;margin-bottom: 10px;}
+.navbar-default {background-color: #033345;border-color: #033345;border-top: 6px solid #033345;border-bottom: 2px solid #F5EFEF}
+.navbar-default .navbar-brand {color: #ffffff;}
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus {color: #e6e6e6;background-color: transparent;}
+.navbar-default .navbar-text,.navbar-default .navbar-link,.navbar-default .navbar-link:hover,.navbar-default .btn-link,.navbar-default .btn-link:hover,.navbar-default .btn-link:focus,.navbar-default .navbar-nav > li > a {color: #ffffff;}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{background:#0078B9;border-bottom: 2px solid #F0AD29;height: 40px;color: #ffffff;}
+.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:focus {color: #ffffff;background-color: #006298;}
+.navbar-default .navbar-collapse,.navbar-default .navbar-form {border-color: #f0ad29;}
+.navbar-default .navbar-nav > .open > a,.navbar-default .navbar-nav > .open > a:hover,.navbar-default .navbar-nav > .open > a:focus {background-color: #006298;color: #ffffff;}
+.dropdown-menu > li > a:hover,.dropdown-menu > li > a:focus {background-color: #0078B9;color:#fff;}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {color: #ffffff;}
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {color: #ffffff;background-color: #0087b9;}
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {color: #ffffff;background-color: #006298;}
+}
+
+
+/*Bootstrap custom overrides end*/
+
+/*THEME STYLES*/
+
+.container{width:100%;}
+.footer {position: fixed;bottom: 0;width: 100%;height: 30px;background-color: #033345;border-top: 1px solid #F5EFEF;z-index: 3;}
+.footer-container{color:#F7F4EF; font-size:12px;margin-top:8px;}
+.plainlink, .plainlink:hover{text-decoration:none;color:inherit;}
+.modal{font-size:12px;}
+.umkc-brand{display:inline-block;padding-right:3px;}
+.umkc-brand>a>img{height:50px;margin-top:-10px;padding-right:5px; }
+.app-brand{margin-left:0px !important; font-family: 'Open Sans', sans-serif; font-size:21px; line-height:29px; font-weight:300;padding-left:3px;color:#fff !important;}.app-brand:hover{color:#fff;}
+
+@media all and (max-width:411px){.umkc-brand>a>img {height: 20px;}.app-brand{font-size: 12px;padding: 1px !important;line-height: 45px;}}
+@media all and (min-width:411px) and (max-width:474px){.app-brand{font-size: 13px;line-height: 30px;}}
+@media all and (min-width:475px) and (max-width:768px){.app-brand{font-size: 16px;line-height: 30px;}}
+@media all and (max-width: 904px){.umkc-brand{display:inline-block;border-right:none;}}
+
+/*NAVBAR COLLAPSE STYLES*/
+.navbar-default .navbar-toggle {background-color: #00527e;}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {background-color: transparent;}.navbar-default .navbar-toggle .icon-bar {background-color: #fff;}
+
+/*MENU Styles*/
+.search-menu{width:300px;padding:15px;border-radius:2px;background:#006298;border-top:2px solid #F0AD29;}
+.solid-menu{border-radius:2px;padding-top: 0px;padding-bottom:0px;background:#006298;border-top:2px solid #F0AD29;}
+.search-menu>li>a, .solid-menu>li>a{line-height:2;color:#fff;padding: 6px 18px;}
+.menu-badge{position: relative;top: -10px;left: -5px; margin-right: -21px;background-color:#D9534F;}
+
+/*LOGIN PAGE*/
+.login,.login-panel{margin-top:50px;padding:30px; min-height:250px;}.login-alert{position: absolute;right: calc(50% - 150px);width: 300px;text-align:center;display:none;z-index:1050;}.login-panel h3{margin:0px;}.login-panel .panel{box-shadow: 0px 0px 5px 0.8px #ccc;}
+@media all and (max-width: 767px){.login-alert{top: 70px;}.login-panel .panel {box-shadow: 0px 0px 5px 0.8px #3697BA;}.panel-default {border:none;}.login,.login-panel{margin-top:0px;}}
+@media all and (max-width: 1365px) and (min-width: 768px){.login{margin-top:50px;border:4px solid #0078B9; border-radius:8px;}.login-alert{top: 50px;}}
+@media (min-width:1366px){.login{margin-top:150px;border:8px solid #0078B9; border-radius:4px;}.login-alert{top: 70px;}}  	
+.btn-primary{ color: #fff; background-color:#317E9A; border-color:#317E9A}			
+.btn-primary:hover,.btn-primary:focus,.btn-primary.focus,.btn-primary:active,.btn-primary.active,.open>.dropdown-toggle.btn-primary{color:#fff;background-color:#033345;border-color:#256B85}
+/*SUPPORT MODAL*/														  
+.support-modal .modal-content{border: 4px solid #F0AD29;}
+.support-modal textarea{resize:none;}						  
+
